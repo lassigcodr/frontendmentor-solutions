@@ -1,0 +1,75 @@
+@use '../util/' as u;
+
+.notification {
+    margin-bottom: u.rem(10);
+    padding: u.rem(10);
+    display: flex;
+    gap: u.rem(16);
+    border-radius: u.rem(4);
+    position: relative;
+
+    &__image {
+        width: u.rem(40);
+        height: u.rem(40);
+    }
+
+    &__message {
+        font-weight: 500;
+        color: var(--dark-grayish-blue);
+        position: relative;
+
+        &::after {
+            content: "";
+            margin-right: u.rem(10);
+            height: u.rem(10);
+            width: u.rem(10);
+            border-radius: 50%;
+            background-color: var(--red);
+            display: inline-block;
+            visibility: hidden;
+        }
+
+        &--owner, &--owner:visited {
+            color: var(--dark-blue);
+        }
+
+        &--subject, &--subject:visited {
+            color: var(--dark-grayish-blue);
+        }
+
+        &--subject.group {
+            color: var(--blue);
+        }
+
+        &--owner:hover, &--subject:hover {
+            color: var(--blue);
+        }
+
+        &--time {
+            color: var(--grayish-blue);
+        }
+
+        &--inbox {
+            display: block;
+            padding: u.rem(14);
+            border: 1px solid var(--dark-grayish-blue);
+            border-radius: u.rem(4);
+            cursor: pointer;
+        }
+
+        &--inbox:hover {
+            border-color: var(--light-grayish-blue-1);
+            background-color: var(--light-grayish-blue-1);
+        }
+
+        &--photo {
+            height: u.rem(40);
+
+            @media (min-width: u.em(700)) {
+                position: absolute;
+                right: 0;
+                margin-right: u.rem(10);
+            }
+        }
+    }
+}

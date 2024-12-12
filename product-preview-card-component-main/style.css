@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --main-color: hsl(212, 21%, 14%);
+    --secondary-color: hsl(228, 12%, 48%);
+    --accent-color: hsl(158, 36%, 37%);
+    --bg-color: hsl(30, 38%, 92%);
+    --font-size: 12px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--white);
+    display: flex;
+}
+
+.product-image picture img {
+    position: static;
+    width: 250px;
+    height: 100%;
+}
+
+.product-detail {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#category {
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: var(--font-size);
+    font-weight: 400;
+    letter-spacing: .2em;
+    color: var(--secondary-color);
+}
+
+#title {
+    margin: 10px 0;
+    line-height: 1.2em;
+    color: var(--main-color);
+}
+
+#desc {
+    margin: 10px 0;
+    line-height: 1.2em;
+    font-size: var(--font-size);
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.price {
+    margin: 10px 0;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.price li h1 {
+    color: var(--accent-color);
+}
+.price #prev {
+    margin-left: 15px;
+    font-size: var(--font-size);
+    text-decoration: line-through;
+    color: var(--secondary-color);
+
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: var(--font-size);
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+button:hover {
+    background-color: hsl(158, 45%, 15%);
+    cursor: pointer;
+}
+
+embed {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+    body {
+        position: relative;
+        padding: auto;
+    }
+    .wrapper {
+        width: 300px;
+        flex-direction: column;
+    }
+    .product-image picture img {
+        width: 100%;
+    }
+}
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.attribution a { color: hsl(228, 45%, 44%); }

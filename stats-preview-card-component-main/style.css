@@ -1,0 +1,149 @@
+
+
+:root {
+    --main-background-color: hsl(233, 47%, 7%);
+    --card-background-color: hsl(244, 38%, 16%);
+    --accent-color: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --main-paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --stat-headings-color: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size: 15px;
+    background-color: var(--main-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 1048px;
+    background-color: var(--card-background-color);
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "content-block image-block";
+}
+
+.img-container {
+    grid-area: image-block;
+    position: relative;
+}
+
+.overlay {
+    background-color: hsla(277, 80%, 35%, 0.54);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.content-container {
+    grid-area: content-block;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.stat-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    font-weight: 700;
+    color: var(--white);
+}
+
+.heading span {
+    color: var(--accent-color);
+}
+
+.body {
+    font-weight: 400;
+    color: var(--main-paragraph-color);
+    line-height: 1.5rem;
+}
+
+.stat {
+    margin-top: auto;
+    text-align: left;
+}
+
+.stat-number {
+    font-weight: 400;
+    color: var(--white);
+}
+
+.stat-category {
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--stat-headings-color);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 8rem;
+    }
+
+    .container,
+    .content-container,
+    .stat-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image-block"
+        "content-block";
+        gap: 1rem;
+    }
+
+    .container {
+        width: 20rem;
+    }
+
+    .content-container {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .hero-image {
+        height: auto;
+    }
+}
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

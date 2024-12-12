@@ -1,0 +1,172 @@
+
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    background-image: url('images/bg-pattern-top-mobile.svg'), url('images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+}
+
+.container {
+    margin: 40px 20px;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.text>h1 {
+    margin-bottom: 20px;
+    color: var(--very-dark-magenta);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.text>p {
+    color: var(--dark-grayish-magenta);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+.ratings {
+    text-align: center;
+}
+
+.rate {
+    margin: 15px 0;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: var(--light-grayish-magenta);
+}
+
+strong {
+    color: var(--very-dark-magenta);
+}
+
+.reviews {
+    margin-top: 40px;
+}
+
+.card {
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--very-dark-magenta);
+    color: var(--white);
+    line-height: 1.5em;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile>img {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.person {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.verified {
+    color: var(--soft-pink);
+    font-weight: 400;
+}
+
+.card>p {
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 600px) {
+    body {
+        height: 100vh;
+        background-image: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container {
+        width: 65.2rem;
+    }
+    .hero {
+        display: flex;
+        justify-content: space-between;
+    }
+    .text {
+        width: 40%;
+        text-align: left;
+    }
+    .ratings {
+        width: 50%;
+    }
+    .reviews {
+        display: flex;
+        gap: 2rem;
+    }
+    .rate {
+        padding: 24px 40px;
+        display: flex;
+    }
+    .rate:nth-child(1) {
+        margin-right: 100px;
+    }
+    .rate:nth-child(2) {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .rate:nth-child(3) {
+        margin-left: 100px;
+    }
+    .stars {
+        margin-right: 10px;
+    }
+    strong {
+        margin-left: 10px;
+    }
+    .card {
+        height: fit-content;
+    }
+    .card:nth-child(2) {
+        margin-top: 50px;
+    }
+    .card:nth-child(3) {
+        margin-top: 100px;
+    }
+}

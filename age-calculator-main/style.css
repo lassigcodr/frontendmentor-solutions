@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "Poppins";
+    src: url(assets/fonts/Poppins-Bold.ttf),
+        url(assets/fonts/Poppins-BoldItalic.ttf),
+        url(assets/fonts/Poppins-ExtraBold.ttf),
+        url(assets/fonts/Poppins-ExtraBoldItalic.ttf),
+        url(assets/fonts/Poppins-Italic.ttf),
+        url(assets/fonts/Poppins-Regular.ttf);
+}
+
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+}
+
+.main {
+    background-color: white;
+    border-radius: 1rem 1rem 6rem;
+}
+
+.container {
+    padding: 2rem 6rem 2rem 2rem;
+}
+
+.form-container {
+    padding-right: 60px;
+    padding-bottom: 30px;
+    display: flex;
+    gap: 1rem;
+}
+
+.block {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.block label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--smokey-grey);
+}
+
+.block input {
+    width: 86px;
+    padding: .5rem;
+    font-weight: 700;
+    font-size: 32px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    color: var(--off-black);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.block input::placeholder {
+    color: var(--smokey-grey);
+}
+
+.block input:focus {
+    outline: 1px solid var(--purple);
+}
+
+.block small {
+    visibility: hidden;
+}
+
+
+.block.error input {
+    outline: none;
+    border: 1px solid var(--red);
+}
+
+.block.error label {
+    color: var(--red);
+}
+
+.block.error small {
+    visibility: visible;
+    color: var(--red);
+    font-style: italic;
+}
+
+.submit-block {
+    position: relative;
+}
+
+.submit {
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--purple);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: var(--off-black);
+}
+
+.output {
+    padding: 30px 0 0 0;
+}
+
+.output h1 {
+    font-size: 4rem;
+    font-weight: 800i;
+    font-style: italic;
+}
+
+.output h1 span {
+    color: var(--purple);
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    .form-container {
+        padding-right: 0;
+    }
+
+    .block {
+        padding: 0;
+    }
+
+    .block input {
+        width: 84px;
+    }
+    
+    .submit {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

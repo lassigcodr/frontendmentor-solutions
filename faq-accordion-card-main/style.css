@@ -1,0 +1,204 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap'); */
+
+:root {
+    --desaturated-blue: hsl(238, 29%, 16%);
+    --dark-grayish-blue: hsl(237, 12%, 33%);
+    --grayish-blue: hsl(240, 6%, 50%);
+    --accent-color: hsl(14, 88%, 65%);
+    --bg-gradient-violet: hsl(273, 75%, 66%);
+    --bg-gradient-blue: hsl(240, 73%, 65%);
+    --divider-color: hsl(240, 5%, 91%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    padding: 0 20px;
+    font-size: 12px;
+    position: relative;
+    background: linear-gradient(var(--bg-gradient-violet) 0%, var(--bg-gradient-blue) 100%);
+}
+
+
+.card {
+    margin-top: 150px;
+    padding-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+}
+
+.card-image {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-image::after {
+    content: url('images/bg-pattern-mobile.svg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.card-info {
+    padding: 40px 20px 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--desaturated-blue);
+}
+
+.info-list {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+}
+
+.title:hover {
+    color: var(--accent-color);
+}
+
+.title-active {
+    color: var(--desaturated-blue);
+    font-weight: 700;
+}
+
+.body {
+    display: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+.body-active {
+    display: block;
+}
+
+.dropdown-icon {
+    position: relative;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dropdown-icon::after {
+    content: url('images/icon-arrow-down.svg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.dropdown-icon.active::after{
+    transform: rotate(180deg);
+}
+
+@media (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        position: relative;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .card-info {
+        padding: 0;
+    }
+
+    .card {
+        margin: 0;
+        padding: 40px;
+        width: 786px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-image {
+        position: relative;
+        top: 10px;
+        left: 30px;
+    }
+
+    #illustration {
+        height: 280px;
+        width: auto;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .box::after {
+        content: url('images/illustration-box-desktop.svg');
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 219px;
+        left: -8px;
+        z-index: 3;
+    }
+
+    .card-image::after {
+        content: url('images/bg-pattern-desktop.svg');
+        height: 37px;
+        top: 80px;
+        left: -346px;
+        z-index: -2;
+    }
+
+}

@@ -1,0 +1,51 @@
+@use './util/' as u;
+
+:root {
+    --background-color: hsl(218, 23%, 16%);
+    --card-color: hsl(217, 19%, 24%);
+    --accent-color: hsl(150, 100%, 66%);
+    --text-color: hsl(193, 38%, 86%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h6, p {
+    margin-top: 0;
+}
+
+#random-btn {
+    height: u.rem(50);
+    width: u.rem(50);
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: u.rem(-28);
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#random-btn:hover {
+    box-shadow: 0 0 30px 0 var(--accent-color);
+}

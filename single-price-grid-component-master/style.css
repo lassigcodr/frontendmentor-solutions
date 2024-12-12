@@ -1,0 +1,146 @@
+
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 62%, 53%);
+    --yellow: hsl(71, 73%, 54%);
+    --gray: hsl(204, 43%, 93%);
+    --blue: hsl(218, 22%, 67%);
+    --fw-big: 700;
+    --fw-sml: 400;
+    --font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--gray);
+    font-size: var(--font-size);
+}
+
+ul {
+    list-style: none;
+}
+
+h2,
+h3,
+p,
+ul,
+button {
+    color: white;
+    margin: 16px 0;
+}
+
+
+#price {
+    margin-right: 10px;
+    font-size: 2em;
+    font-weight: var(--fw-big);
+    color: white;
+}
+
+span {
+    vertical-align: middle;
+}
+
+span, li, #offer {
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+
+#info, li {
+    line-height: 1.5em;
+}
+
+button {
+    width: 100%;
+    padding: 1em 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--yellow);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.container {
+    margin: 30px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px hsla(218, 22%, 67%, .2);
+}
+
+.content-component {
+    padding: 2em;
+}
+
+.content-component:nth-child(1) {
+    background-color: white;
+}
+
+.content-component:nth-child(2) {
+    background-color: var(--cyan);
+}
+
+.content-component:nth-child(3) {
+    background-color: var(--light-cyan);
+}
+
+.content-component:nth-child(1)>h2 {
+    color: var(--cyan);
+}
+
+.content-component:nth-child(1)>h3 {
+    color: var(--yellow);
+}
+
+.content-component:nth-child(1)>p {
+    color: var(--blue);
+    font-weight: var(--fw-sml);
+}
+
+@media (min-width: 600px) {
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container {
+        max-width: 42.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "top top"
+            "left right";
+    }
+    .content-component:nth-child(1) {
+        grid-area: top;
+    }
+    
+    .content-component:nth-child(2) {
+        grid-area: left;
+    }
+    
+    .content-component:nth-child(3) {
+        grid-area: right;
+    }
+}
+
+
+.attribution { 
+    color: black;
+    font-size: 11px; 
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

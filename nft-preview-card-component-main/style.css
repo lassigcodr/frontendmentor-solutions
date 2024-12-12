@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+:root {
+    --clr-primary: hsl(215, 51%, 70%);
+    --clr-accent: hsl(178, 100%, 50%);
+    --clr-main-bg: hsl(217, 54%, 11%);
+    --clr-card-bg: hsl(216, 50%, 16%);
+    --clr-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-main-bg);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    padding: 1.25rem;
+    width: 300px;
+    border-radius: .75rem;
+    background-color: var(--clr-card-bg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+
+.card-img img {
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.overlay {
+    border-radius: .5rem;
+    height: 260px;
+    width: 260px;
+    position: absolute;
+    top: 3.75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(178, 100%, 50%, 0.7);
+    opacity: 0;
+}
+
+.overlay img {
+    width: 100px;
+}
+
+.overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+h1, p {
+    margin: .75rem 0;
+}
+
+h1 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+h1:hover, #name:hover {
+    color: var(--clr-accent);
+    cursor: pointer;
+}
+
+p {
+    color: var(--clr-primary);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.value-time {
+    margin: .75rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+embed {
+    margin-right: 5px;
+    text-align: right;
+    float: left;
+}
+
+.time embed {
+    margin-top: 1.5px;
+}
+
+.value span {
+    color: var(--clr-accent);
+    font-weight: 300;
+    font-size: 16px;
+    text-align: left;
+    float: left;
+}
+
+.time span {
+    color: var(--clr-primary);
+    font-weight: 300;
+    font-size: 16px;
+    text-align: left;
+    float: left;
+}
+
+#attribution {
+    display: flex;
+    padding: 1rem 0;
+    border-top: 2px solid var(--clr-line);
+}
+
+#attribution p {
+    margin-left: 2%;
+    font-weight: 400;
+    text-align: left;
+    float: left;
+}
+
+#attribution img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin-right: 2%;
+    text-align: right;
+    float: left;
+}
+
+#name {
+    color: var(--white);
+}
+    

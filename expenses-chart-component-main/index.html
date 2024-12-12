@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <link rel="stylesheet" href="./dist/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <main class="account-chart">
+    <section class="chart-header">
+      <div>
+        <p class="desc">My balance</p>
+        <p class="amount">$921.48</p>
+      </div>
+      <div>
+        <img src="images/logo.svg" alt="" class="logo">
+      </div>
+    </section>
+    <section class="chart-body">
+      <p class="title">Spending - Last 7 days</p>
+      <div class="wrapper">
+        <div class="bars">
+          <div class="tooltip"></div>
+          <div class="bar"></div>
+          <p class="day"></p>
+        </div>
+        <div class="bars">
+          <div class="tooltip"></div>
+          <div class="bar"></div>
+          <p class="day"></p>
+        </div>
+        <div class="bars">
+          <div class="tooltip"></div>
+          <div class="bar"></div>
+          <p class="day"></p>
+        </div>
+        <div class="bars">
+          <div class="tooltip"></div>
+          <div class="bar"></div>
+          <p class="day"></p>
+        </div>
+        <div class="bars">
+          <div class="tooltip"></div>
+          <div class="bar"></div>
+          <p class="day"></p>
+        </div>
+        <div class="bars">
+          <div class="tooltip"></div>
+          <div class="bar"></div>
+          <p class="day"></p>
+        </div>
+        <div class="bars">
+          <div class="tooltip"></div>
+          <div class="bar"></div>
+          <p class="day"></p>
+        </div>
+      </div>
+      <div class="summary">
+        <div>
+          <p class="desc">Total this month</p>
+          <p class="amount">$478.33</p>
+        </div>
+        <div>
+          <p class="desc dark">+2.4%</p>
+          <p class="desc">from last month</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="attribution" style="display: none;">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Obasi Wisdom</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

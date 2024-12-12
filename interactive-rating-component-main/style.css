@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+:root {
+    --bg-color: hsl(216, 12%, 8%);
+    --base-color: hsl(213, 19%, 18%);
+    --grey: hsl(216, 12%, 54%);
+    --light-grey: hsla(217, 12%, 63%, 0.1);
+    --accent-color: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {background-color: var(--bg-color); font-family: 'Overpass', sans-serif;}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: var(--base-color);
+}
+
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-grey);
+}
+
+.icon embed {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    margin: 10px 0;
+    font-weight: 700;
+    color: var(--white);
+}
+
+p {
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+ul {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-value {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--light-grey);
+    color: var(--grey);
+}
+
+.input-value:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.active {
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+#submit-btn {
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+}
+
+#submit-btn:hover {
+    background-color: var(--white);
+    color: var(--accent-color);
+}
+
+#appreciation {
+    display: none;
+    text-align: center;
+}
+
+.fig {margin: 10px 0;}
+
+#choice {
+    width: fit-content;
+    padding: 5px 8px;
+    margin: 10px auto;
+    background-color: var(--light-grey);
+    color: var(--accent-color);
+    border-radius: 20px;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.attribution a { color: hsl(228, 45%, 44%); }

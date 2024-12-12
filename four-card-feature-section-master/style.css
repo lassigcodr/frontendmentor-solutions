@@ -1,0 +1,150 @@
+
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --font-size: 15px;
+    --fw-large: 600;
+    --fw-medium: 400;
+    --fw-small: 200;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 15px 20px 15px;
+    font-size: var(--font-size);
+    background-color: var(--very-light-gray);
+}
+
+.container {
+    margin: 20px 0 20px 0;
+}
+
+.header {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.heading {
+    margin-bottom: 5px;
+    font-size: 2em;
+    font-weight: var(--fw-small);
+    color: var(--very-dark-blue);
+}
+
+.heading.bold {
+    font-weight: var(--fw-large);
+}
+
+.header-paragraph {
+    margin: 5px 0;
+    font-size: 1em;
+    font-weight: var(--fw-small);
+    color: var(--grayish-blue);
+}
+
+.wrapper {
+    margin: 10px 0;
+}
+
+
+.card {
+    min-height: 232px;
+    margin: 13px 0;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--very-light-gray);
+    box-shadow: 0 10px 20px 5px hsla(234, 12%, 34%, 0.2);
+    border-top: 5px solid;
+}
+
+
+.card-heading {
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: var(--fw-medium);
+    color: var(--very-dark-blue);
+}
+
+.card-paragraph {
+    margin: 10px 0;
+    font-size: .75em;
+    color: var(--grayish-blue);
+}
+
+#supervisor {
+    border-color: var(--cyan);
+    background-image: url('images/icon-supervisor.svg');
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 30px;
+}
+
+#team-builder {
+    border-color: var(--red);
+    background-image: url('images/icon-team-builder.svg');
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 30px;
+}
+
+#karma {
+    border-color: var(--orange);
+    background-image: url('images/icon-karma.svg');
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 30px;
+}
+
+#calculator {
+    border-color: var(--blue);
+    background-image: url('images/icon-calculator.svg');
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 30px;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 600px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header {
+        max-width: 380px;
+    }
+
+    .wrapper {
+        width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

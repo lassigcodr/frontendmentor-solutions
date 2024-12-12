@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="./dist/style.css">
+  <script src="main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="wrapper">
+    <!-- logo -->
+    <div class="img-container">
+      <img src="images/logo.svg" alt="snap" class="logo">
+    </div>
+    <nav class="navbar">
+      <!-- desktop view  -->
+      <div class="desktop-orientation">
+        <ul class="navigation-links">
+          <li class="nav-link"> 
+            <div class="dropdown-item">
+              <div>Features</div>
+              <div class="arrow down"></div>
+            </div>
+            <ul class="dropdowns">
+              <li class="dropdown-link"><div class="icon todo"></div><a href="#">Todo</a></li>
+              <li class="dropdown-link"><div class="icon calender"></div><a href="#">Calender</a></li>
+              <li class="dropdown-link"><div class="icon remainder"></div><a href="#">Remainder</a></li>
+              <li class="dropdown-link"><div class="icon planning"></div><a href="#">Planning</a></li>
+            </ul>
+          </li>
+          <li class="nav-link"> 
+            <div class="dropdown-item">
+              <div>Company</div>
+              <div class="arrow down"></div>
+            </div>
+            <ul class="dropdowns">
+              <li class="dropdown-link"><a href="#">History</a></li>
+              <li class="dropdown-link"><a href="#">Our Team</a></li>
+              <li class="dropdown-link"><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-link"><a href="#">Careers</a></li>
+          <li class="nav-link"><a href="#">About</a></li>
+        </ul>
+
+        <ul class="authentication-links"> 
+          <li class="nav-link"><a href="#">Login</a></li>
+          <li class="nav-link outlined"><a href="#">Register</a></li>
+        </ul>
+      </div>
+      <div class="mobile-orientation">
+        <div class="menu">
+          <div class="hamburger"></div>
+        </div>
+        <div class="links">
+          <ul class="navigation-links">
+            <li class="nav-link"> 
+              <div class="dropdown-item">
+                <div>Features</div>
+                <div class="arrow down"></div>
+              </div>
+              <ul class="dropdowns">
+                <li class="dropdown-link"><div class="icon todo"></div><a href="#">Todo</a></li>
+                <li class="dropdown-link"><div class="icon calender"></div><a href="#">Calender</a></li>
+                <li class="dropdown-link"><div class="icon remainder"></div><a href="#">Remainder</a></li>
+                <li class="dropdown-link"><div class="icon planning"></div><a href="#">Planning</a></li>
+              </ul>
+            </li>
+            <li class="nav-link"> 
+              <div class="dropdown-item">
+                <div>Company</div>
+                <div class="arrow down"></div>
+              </div>
+              <ul class="dropdowns">
+                <li class="dropdown-link"><a href="#">History</a></li>
+                <li class="dropdown-link"><a href="#">Our Team</a></li>
+                <li class="dropdown-link"><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li class="nav-link"><a href="#">Careers</a></li>
+            <li class="nav-link"><a href="#">About</a></li>
+          </ul>
+  
+          <ul class="authentication-links"> 
+            <li class="nav-link"><a href="#">Login</a></li>
+            <li class="nav-link outlined"><a href="#">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <picture class="hero-image">
+        <source media="(min-width: 700px)" srcset="images/image-hero-desktop.png">
+        <img src="images/image-hero-mobile.png" alt="" >
+      </picture>
+      <div class="hero-text-content">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+        </p>
+        <button>Learn more</button>
+        <div class="sponsors">
+          <div class="img">
+            <img src="images/client-databiz.svg" alt="">
+          </div>
+          <div class="img">
+            <img src="images/client-audiophile.svg" alt="">
+          </div>
+          <div class="img">
+            <img src="images/client-meet.svg" alt="">
+          </div>
+          <div class="img">
+            <img src="images/client-maker.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

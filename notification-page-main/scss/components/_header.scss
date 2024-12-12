@@ -1,0 +1,42 @@
+@use '../util/' as u;
+
+.header {
+    padding: u.rem(20) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__h1 {
+        font-weight: 800;
+        font-size: 26px;
+        color: var(--dark-blue);
+    }
+
+    &__span {
+        padding: 0 u.rem(12);
+        font-weight: 400;
+        border-radius: u.rem(4);
+        color: var(--white);
+        background-color: var(--blue);
+    }
+
+    &__p {
+        color: var(--grayish-blue);
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    &__p:hover {
+        color: var(--blue);
+    }
+
+    @media (max-width: 700px) {
+        &__h1 {
+            font-size: 20px;
+        }
+
+        &__a {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use '../util/' as u;
+
+.card {
+    padding: u.rem(40);
+    max-width: u.rem(600);
+    border-radius: u.rem(20);
+    text-align: center;
+    background-color: var(--card-color);
+    position: relative;
+
+    &__heading {
+        letter-spacing: u.rem(3);
+        text-transform: uppercase;
+        color: var(--accent-color);
+    }
+
+    &__quote {
+        padding: u.rem(10);
+        font-size: u.rem(28);
+        font-weight: 800;
+        color: var(--text-color);
+    }
+
+    &__divider {
+        margin-bottom: u.rem(18);
+    }
+
+    @include u.breakpoint-down(small) {
+        width: min-content;
+        padding: u.rem(20);
+    }
+}
+
